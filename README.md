@@ -2,4 +2,4 @@
 
 **[Live Demo](https://free-easy-code.github.io/landingpage02/)**
 
-![Screenshot](https://github.com/free-easy-code/landingpage02/blob/main/images/screenshots.png)
+![Screenshot](https://github.com/free-easy-code/landingpage02/blob/main/images/screenshot.png)

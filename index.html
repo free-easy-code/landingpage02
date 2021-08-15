@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaksin Covid Dashboard</title>
+
+    <!-- Favicons -->
+    <link href="images/favicon.png" rel="icon">
+    <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- owl carousel css -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-dark navbar-expand-md fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/brand-logo.png" height="50" alt="">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon navbar-dark"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-scroll-nav="0" aria-current="page" href="#">Status Vaksin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-scroll-nav="1" href="#">Situasi Covid</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Tab Header Start -->
+    <section class="tab-header" id="vaksin" data-scroll-index="0">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-6">
+                    <h1>Vaksinasi Covid-19 Kota Magelang</h1>
+                    <p>[Data per Tanggal 10 Agustus 2021 Pukul 21:00]</p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="nav nav-pills nav-justified" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-kota-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-kota" type="button" role="tab" aria-controls="pills-kota"
+                                aria-selected="true">Kota/Kab</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-kecamatan-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-kecamatan" type="button" role="tab"
+                                aria-controls="pills-kecamatan" aria-selected="false">Kecamatan</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-kelurahan-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-kelurahan" type="button" role="tab"
+                                aria-controls="pills-kelurahan" aria-selected="false">Kelurahan</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-rw-tab" data-bs-toggle="pill" data-bs-target="#pills-rw"
+                                type="button" role="tab" aria-controls="pills-rw" aria-selected="false">RW</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-rt-tab" data-bs-toggle="pill" data-bs-target="#pills-rt"
+                                type="button" role="tab" aria-controls="pills-rt" aria-selected="false">RT</button>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Tab Header End -->
+
+    <!-- Tab Content Start -->
+    <section class="tab-content">
+        <div class="container">
+            <div class="tab-content" id="pills-tabContent">
+
+                <div class="tab-pane fade show active" id="pills-kota" role="tabpanel" aria-labelledby="pills-kota-tab">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="card bg-cherry">
+                                <div class="card-body align-items-center justify-content-center">
+                                    <h3 class="card-title">Data Vaksinasi
+                                        Kota/Kab</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="card-icon card-icon-large"><i class="fas fa-users"></i></div>
+                                    <div class="mb-auto">
+                                        <h5 class="card-title">Dosis Vaksinasi</h5>
+                                    </div>
+                                    <div class="row align-items-center mb-2">
+                                        <div class="col-8">
+                                            <h2 class="d-flex align-items-center mb-0">
+                                                25.000k
+                                            </h2>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <span>2.5% <i class="fas fa-arrow-up"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="progress" style="height: 25px;">
+                                        <div class="progress-bar bg-cherry" role="progressbar" style="width: 25%;"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="card-icon card-icon-large"><i class="fas fa-ticket-alt"></i></div>
+                                    <div class="mb-auto">
+                                        <h5 class="card-title">Vaksinasi Pertama</h5>
+                                    </div>
+                                    <div class="row align-items-center mb-2">
+                                        <div class="col-8">
+                                            <h2 class="d-flex align-items-center mb-0">
+                                                7.500k
+                                            </h2>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <span>2.5% <i class="fas fa-arrow-up"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="progress" style="height: 25px;">
+                                        <div class="progress-bar bg-cherry" role="progressbar" style="width: 75%;"
+                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="card-icon card-icon-large"><i class="fas fa-ticket-alt"></i></div>
+                                    <div class="mb-auto">
+                                        <h5 class="card-title">Vaksinasi Kedua</h5>
+                                    </div>
+                                    <div class="row align-items-center mb-2">
+                                        <div class="col-8">
+                                            <h2 class="d-flex align-items-center mb-0">
+                                                5.000k
+                                            </h2>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <span>2.5% <i class="fas fa-arrow-up"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="progress" style="height: 25px;">
+                                        <div class="progress-bar bg-cherry" role="progressbar" style="width: 50%;"
+                                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="pills-kecamatan" role="tabpanel" aria-labelledby="pills-kecamatan-tab">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="card bg-blue">
+                                <div class="card-body align-items-center justify-content-center">
+                                    <h3 class="card-title">Data Vaksinasi
+                                        Kecamatan</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="card-icon card-icon-large"><i class="fas fa-users"></i></div>
+                                    <div class="mb-auto">
+                                        <h5 class="card-title">Dosis Vaksinasi</h5>
+                                    </div>
+                                    <div class="row align-items-center mb-2">
+                                        <div class="col-8">
+                                            <h2 class="d-flex align-items-center mb-0">
+                                                25.000k
+                                            </h2>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <span>2.5% <i class="fas fa-arrow-up"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="progress" style="height: 25px;">
+                                        <div class="progress-bar bg-blue" role="progressbar" style="width: 25%;"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="card-icon card-icon-large"><i class="fas fa-ticket-alt"></i></div>
+                                    <div class="mb-auto">
+                                        <h5 class="card-title">Vaksinasi Pertama</h5>
+                                    </div>
+                                    <div class="row align-items-center mb-2">
+                                        <div class="col-8">
+                                            <h2 class="d-flex align-items-center mb-0">
+                                                7.500k
+                                            </h2>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <span>2.5% <i class="fas fa-arrow-up"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="progress" style="height: 25px;">
+                                        <div class="progress-bar bg-blue" role="progressbar" style="width: 75%;"
+                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="card-icon card-icon-large"><i class="fas fa-ticket-alt"></i></div>
+                                    <div class="mb-auto">
+                                        <h5 class="card-title">Vaksinasi Kedua</h5>
+                                    </div>
+                                    <div class="row align-items-center mb-2">
+                                        <div class="col-8">
+                                            <h2 class="d-flex align-items-center mb-0">
+                                                5.000k
+                                            </h2>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <span>2.5% <i class="fas fa-arrow-up"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="progress" style="height: 25px;">
+                                        <div class="progress-bar bg-blue" role="progressbar" style="width: 50%;"
+                                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="pills-kelurahan" role="tabpanel" aria-labelledby="pills-kelurahan-tab">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="card bg-green">
+                                <div class="card-body align-items-center justify-content-center">
+                                    <h3 class="card-title">Data Vaksinasi
+                                        Kelurahan</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="card-icon card-icon-large"><i class="fas fa-users"></i></div>
+                                    <div class="mb-auto">
+                                        <h5 class="card-title">Dosis Vaksinasi</h5>
+                                    </div>
+                                    <div class="row align-items-center mb-2">
+                                        <div class="col-8">
+                                            <h2 class="d-flex align-items-center mb-0">
+                                                25.000k
+                                            </h2>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <span>2.5% <i class="fas fa-arrow-up"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="progress" style="height: 25px;">
+                                        <div class="progress-bar bg-green" role="progressbar" style="width: 25%;"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="card-icon card-icon-large"><i class="fas fa-ticket-alt"></i></div>
+                                    <div class="mb-auto">
+                                        <h5 class="card-title">Vaksinasi Pertama</h5>
+                                    </div>
+                                    <div class="row align-items-center mb-2">
+                                        <div class="col-8">
+                                            <h2 class="d-flex align-items-center mb-0">
+                                                7.500k
+                                            </h2>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <span>2.5% <i class="fas fa-arrow-up"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="progress" style="height: 25px;">
+                                        <div class="progress-bar bg-green" role="progressbar" style="width: 75%;"
+                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="card-icon card-icon-large"><i class="fas fa-ticket-alt"></i></div>
+                                    <div class="mb-auto">
+                                        <h5 class="card-title">Vaksinasi Kedua</h5>
+                                    </div>
+                                    <div class="row align-items-center mb-2">
+                                        <div class="col-8">
+                                            <h2 class="d-flex align-items-center mb-0">
+                                                5.000k
+                                            </h2>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <span>2.5% <i class="fas fa-arrow-up"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="progress" style="height: 25px;">
+                                        <div class="progress-bar bg-green" role="progressbar" style="width: 50%;"
+                                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="pills-rw" role="tabpanel" aria-labelledby="pills-rw-tab">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="card bg-orange">
+                                <div class="card-body align-items-center justify-content-center">
+                                    <h3 class="card-title">Data Vaksinasi
+                                        Tingkat RW</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="card-icon card-icon-large"><i class="fas fa-users"></i></div>
+                                    <div class="mb-auto">
+                                        <h5 class="card-title">Dosis Vaksinasi</h5>
+                                    </div>
+                                    <div class="row align-items-center mb-2">
+                                        <div class="col-8">
+                                            <h2 class="d-flex align-items-center mb-0">
+                                                25.000k
+                                            </h2>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <span>2.5% <i class="fas fa-arrow-up"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="progress" style="height: 25px;">
+                                        <div class="progress-bar bg-orange" role="progressbar" style="width: 25%;"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="card-icon card-icon-large"><i class="fas fa-ticket-alt"></i></div>
+                                    <div class="mb-auto">
+                                        <h5 class="card-title">Vaksinasi Pertama</h5>
+                                    </div>
+                                    <div class="row align-items-center mb-2">
+                                        <div class="col-8">
+                                            <h2 class="d-flex align-items-center mb-0">
+                                                7.500k
+                                            </h2>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <span>2.5% <i class="fas fa-arrow-up"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="progress" style="height: 25px;">
+                                        <div class="progress-bar bg-orange" role="progressbar" style="width: 75%;"
+                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="card-icon card-icon-large"><i class="fas fa-ticket-alt"></i></div>
+                                    <div class="mb-auto">
+                                        <h5 class="card-title">Vaksinasi Kedua</h5>
+                                    </div>
+                                    <div class="row align-items-center mb-2">
+                                        <div class="col-8">
+                                            <h2 class="d-flex align-items-center mb-0">
+                                                5.000k
+                                            </h2>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <span>2.5% <i class="fas fa-arrow-up"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="progress" style="height: 25px;">
+                                        <div class="progress-bar bg-orange" role="progressbar" style="width: 50%;"
+                                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="pills-rt" role="tabpanel" aria-labelledby="pills-rt-tab">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="card bg-coffee">
+                                <div class="card-body align-items-center justify-content-center">
+                                    <h3 class="card-title">Data Vaksinasi
+                                        Tingkat RT</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="card-icon card-icon-large"><i class="fas fa-users"></i></div>
+                                    <div class="mb-auto">
+                                        <h5 class="card-title">Dosis Vaksinasi</h5>
+                                    </div>
+                                    <div class="row align-items-center mb-2">
+                                        <div class="col-8">
+                                            <h2 class="d-flex align-items-center mb-0">
+                                                25.000k
+                                            </h2>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <span>2.5% <i class="fas fa-arrow-up"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="progress" style="height: 25px;">
+                                        <div class="progress-bar bg-coffee" role="progressbar" style="width: 25%;"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="card-icon card-icon-large"><i class="fas fa-ticket-alt"></i></div>
+                                    <div class="mb-auto">
+                                        <h5 class="card-title">Vaksinasi Pertama</h5>
+                                    </div>
+                                    <div class="row align-items-center mb-2">
+                                        <div class="col-8">
+                                            <h2 class="d-flex align-items-center mb-0">
+                                                7.500k
+                                            </h2>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <span>2.5% <i class="fas fa-arrow-up"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="progress" style="height: 25px;">
+                                        <div class="progress-bar bg-coffee" role="progressbar" style="width: 75%;"
+                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="card-icon card-icon-large"><i class="fas fa-ticket-alt"></i></div>
+                                    <div class="mb-auto">
+                                        <h5 class="card-title">Vaksinasi Kedua</h5>
+                                    </div>
+                                    <div class="row align-items-center mb-2">
+                                        <div class="col-8">
+                                            <h2 class="d-flex align-items-center mb-0">
+                                                5.000k
+                                            </h2>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <span>2.5% <i class="fas fa-arrow-up"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="progress" style="height: 25px;">
+                                        <div class="progress-bar bg-coffee" role="progressbar" style="width: 50%;"
+                                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Tab Content End -->
+
+    <!-- Group Start -->
+    <section class="group" id="covid" data-scroll-index="1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card p-3">
+                        <div class="owl-carousel group-carousel">
+                            <div class="group-item">
+                                <div class="alert alert-primary p-0">
+                                    <div class="card-header bg-transparent">
+                                        <div class="row">
+                                            <div class="col-md-7 text-center text-md-start">
+                                                <h3>Tenaga Kesehatan</h3>
+                                            </div>
+                                            <div class="col-md-5 text-center text-md-end">
+                                                <span>1.468.764</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-4">
+                                            <h5>Vaksinasi Dosis Pertama</h5>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-primary" role="progressbar"
+                                                    style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+                                                    aria-valuemax="100">95%</div>
+                                            </div>
+                                            <p>1.215.878 orang <span>dari 1.468.764</span></p>
+                                        </div>
+                                        <div class="mb-4">
+                                            <h5>Vaksinasi Dosis Kedua</h5>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-primary" role="progressbar"
+                                                    style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                                    aria-valuemax="100">70%</div>
+                                            </div>
+                                            <p>1.092.184 orang <span>dari 1.468.764</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group-item">
+                                <div class="alert alert-success p-0">
+                                    <div class="card-header bg-transparent">
+                                        <div class="row">
+                                            <div class="col-md-7 text-center text-md-start">
+                                                <h3>Lanjut Usia</h3>
+                                            </div>
+                                            <div class="col-md-5 text-center text-md-end">
+                                                <span>1.468.764</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-4">
+                                            <h5>Vaksinasi Dosis Pertama</h5>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-success" role="progressbar"
+                                                    style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+                                                    aria-valuemax="100">95%</div>
+                                            </div>
+                                            <p>1.215.878 orang <span>dari 1.468.764</span></p>
+                                        </div>
+                                        <div class="mb-4">
+                                            <h5>Vaksinasi Dosis Kedua</h5>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-success" role="progressbar"
+                                                    style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                                    aria-valuemax="100">70%</div>
+                                            </div>
+                                            <p>1.092.184 orang <span>dari 1.468.764</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group-item">
+                                <div class="alert alert-danger p-0">
+                                    <div class="card-header bg-transparent">
+                                        <div class="row">
+                                            <div class="col-md-7 text-center text-md-start">
+                                                <h3>Petugas Publik</h3>
+                                            </div>
+                                            <div class="col-md-5 text-center text-md-end">
+                                                <span>1.468.764</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-4">
+                                            <h5>Vaksinasi Dosis Pertama</h5>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-danger" role="progressbar"
+                                                    style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+                                                    aria-valuemax="100">95%</div>
+                                            </div>
+                                            <p>1.215.878 orang <span>dari 1.468.764</span></p>
+                                        </div>
+                                        <div class="mb-4">
+                                            <h5>Vaksinasi Dosis Kedua</h5>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-danger" role="progressbar"
+                                                    style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                                    aria-valuemax="100">70%</div>
+                                            </div>
+                                            <p>1.092.184 orang <span>dari 1.468.764</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group-item">
+                                <div class="alert alert-warning p-0">
+                                    <div class="card-header bg-transparent">
+                                        <div class="row">
+                                            <div class="col-md-7 text-center text-md-start">
+                                                <h3>Tenaga Pendidik</h3>
+                                            </div>
+                                            <div class="col-md-5 text-center text-md-end">
+                                                <span>1.468.764</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-4">
+                                            <h5>Vaksinasi Dosis Pertama</h5>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-warning" role="progressbar"
+                                                    style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+                                                    aria-valuemax="100">95%</div>
+                                            </div>
+                                            <p>1.215.878 orang <span>dari 1.468.764</span></p>
+                                        </div>
+                                        <div class="mb-4">
+                                            <h5>Vaksinasi Dosis Kedua</h5>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-warning" role="progressbar"
+                                                    style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                                    aria-valuemax="100">70%</div>
+                                            </div>
+                                            <p>1.092.184 orang <span>dari 1.468.764</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group-item">
+                                <div class="alert alert-info p-0">
+                                    <div class="card-header bg-transparent">
+                                        <div class="row">
+                                            <div class="col-md-7 text-center text-md-start">
+                                                <h3>Masyarakat Umum</h3>
+                                            </div>
+                                            <div class="col-md-5 text-center text-md-end">
+                                                <span>1.468.764</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-4">
+                                            <h5>Vaksinasi Dosis Pertama</h5>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: 95%;"
+                                                    aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                            </div>
+                                            <p>1.215.878 orang <span>dari 1.468.764</span></p>
+                                        </div>
+                                        <div class="mb-4">
+                                            <h5>Vaksinasi Dosis Kedua</h5>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: 70%;"
+                                                    aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                                            </div>
+                                            <p>1.092.184 orang <span>dari 1.468.764</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group-item">
+                                <div class="alert alert-secondary p-0">
+                                    <div class="card-header bg-transparent">
+                                        <div class="row">
+                                            <div class="col-md-7 text-center text-md-start">
+                                                <h3>Remaja 12-17 th</h3>
+                                            </div>
+                                            <div class="col-md-5 text-center text-md-end">
+                                                <span>1.468.764</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-4">
+                                            <h5>Vaksinasi Dosis Pertama</h5>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-secondary" role="progressbar"
+                                                    style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+                                                    aria-valuemax="100">95%</div>
+                                            </div>
+                                            <p>1.215.878 orang <span>dari 1.468.764</span></p>
+                                        </div>
+                                        <div class="mb-4">
+                                            <h5>Vaksinasi Dosis Kedua</h5>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-secondary" role="progressbar"
+                                                    style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                                                    aria-valuemax="100">70%</div>
+                                            </div>
+                                            <p>1.092.184 orang <span>dari 1.468.764</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Group End -->
+
+    <!-- Counter Start -->
+    <section class="counter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card py-3 px-4">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="section-title">
+                                    <h2>sebaran kasus <span>covid</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="alert alert-danger text-center" role="alert">
+                                    <h4 class="alert-heading">Terkonfirmasi : Dirawat</h4>
+                                    <p class="counter-text justify-content-center">18.915 <span
+                                            class="badge bg-danger rounded-pill">+4.233</span></p>
+                                    <hr>
+                                    <p class="mb-0">Pasien terkonfirmasi COVID-19 yang dirawat di RS atau isolasi
+                                        mandiri</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="alert alert-success text-center" role="alert">
+                                    <h4 class="alert-heading">Terkonfirmasi : Sembuh</h4>
+                                    <p class="counter-text justify-content-center">391.427 <span
+                                            class="badge bg-success rounded-pill">+5.576</span></p>
+                                    <hr>
+                                    <p class="mb-0">Pasien terkonfirmasi COVID-19 yang sembuh atau selesai isolasi
+                                        mandiri</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="alert alert-dark text-center" role="alert">
+                                    <h4 class="alert-heading text-nowrap">Terkonfirmasi : Meninggal</h4>
+                                    <p class="counter-text justify-content-center">28.077 <span
+                                            class="badge bg-dark rounded-pill">+416</span></p>
+                                    <hr>
+                                    <p class="mb-0">Pasien terkonfirmasi COVID-19 yang meninggal dunia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Counter End -->
+
+    <footer class="footer mt-auto bg-white">
+        <div class="container">
+            <p class="text-secondary text-center m-0">&copy;2021 FreeEasyCode</p>
+        </div>
+    </footer>
+
+    <!-- jquery js -->
+    <script src="js/jquery.min.js"></script>
+    <!-- owl carousel js -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- bootstrap bundle with popper -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- ScrollIt js -->
+    <script src="js/scrollIt.min.js"></script>
+    <!-- main js -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
